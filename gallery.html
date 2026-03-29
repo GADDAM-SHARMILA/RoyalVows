@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalVows | Reception Venue & Event Planners</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23c47a2c' d='M2 54h60L50 18l-10 16-10-16-12 16-6-16z'/></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Gallery Page Specific Border - Add to css/style.css */
+body.gallery-page #gallery,
+body:has(#gallery) #gallery:not(.home-gallery) {
+    position: relative !important;
+    border: 3px solid rgba(255, 215, 0, 0.4) !important;
+    border-radius: 20px !important;
+    margin: 2rem auto !important;
+    max-width: 1400px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3) !important;
+}
+
+body.gallery-page #gallery::before,
+body:has(#gallery) #gallery:not(.home-gallery)::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -3px !important;
+    left: -3px !important;
+    right: -3px !important;
+    bottom: -3px !important;
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFA500) !important;
+    border-radius: 23px !important;
+    z-index: -1 !important;
+    animation: borderGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.6; transform: rotate(0deg); }
+    100% { opacity: 1; transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    body.gallery-page #gallery {
+        border-width: 2px !important;
+        margin: 1rem !important;
+        border-radius: 15px !important;
+    }
+}
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            border: 2px solid rgba(255,215,0,0.5);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .filter-tab.active {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #2c1810;
+            box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+            transform: translateY(-2px);
+        }
+        .filter-tab:hover:not(.active) {
+            background: rgba(255,255,255,0.3);
+            border-color: #FFD700;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: #fff;
+            padding: 2rem 1.5rem 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .filter-tabs { gap: 0.5rem; }
+            .filter-tab { padding: 10px 18px; font-size: 0.9rem; }
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+         body.gallery-page .hero {
+        background-image: url('images/ahero.jpg');
+    }
+    </style>
+</head>
+<body class="gallery-page">
+<section id="home" class="hero">
+    <div class="hero-card reveal active">
+        <h1>Our Gallery</h1>
+        <p>Visual Stories of Elegance & Celebration</p>
+        <a href="contact.html" class="cta-btn">Check Availability</a>
+    </div>
+</section>
+
+<section id="gallery" class="bg-img-section gallery-section reveal">
+    <div class="gold-overlay"></div>
+    <div class="section-content-relative">
+        <h2>Our Gallery</h2>
+        <div class="divider" style="background:#fff;"></div>
+
+        <!-- Filter Tabs Section -->
+        <div class="filter-tabs">
+            <div class="filter-tab active" data-filter="all">All Events</div>
+            <div class="filter-tab" data-filter="Birthday">Birthday</div>
+            <div class="filter-tab" data-filter="Wedding">Wedding</div>
+            <div class="filter-tab" data-filter="Special">Special Occasion</div>
+            <div class="filter-tab" data-filter="Corporate">Corporate</div>
+        </div>
+
+        <!-- Unified Gallery Grid -->
+        <div class="gallery-grid" id="galleryContainer">
+            <!-- Birthday Images -->
+            <div class="gallery-item" data-category="Birthday">
+                <img src="images/b1.jpg" alt="Birthday Celebration">
+            </div>
+            <div class="gallery-item" data-category="Birthday">
+                <img src="images/b2.jpg" alt="Birthday Party">
+            </div>
+            <div class="gallery-item" data-category="Birthday">
+                <img src="images/b3.jpg" alt="Birthday Venue">
+            </div>
+            <div class="gallery-item" data-category="Birthday">
+                <img src="images/b4.jpg" alt="Birthday Setup">
+            </div>
+            <div class="gallery-item" data-category="Birthday">
+                <img src="images/b5.jpg" alt="Birthday Decor">
+
+            </div>
+            <div class="gallery-item" data-category="Birthday">
+                <img src="images/b6.jpg" alt="Birthday Hall">
+            </div>
+
+            <!-- Wedding Images -->
+            <div class="gallery-item" data-category="Wedding">
+                <img src="images/w1.jpg" alt="Wedding Reception">
+            </div>
+            <div class="gallery-item" data-category="Wedding">
+                <img src="images/w2.jpg" alt="Wedding Decor">
+
+            </div>
+            <div class="gallery-item" data-category="Wedding">
+                <img src="images/w3.jpg" alt="Wedding Hall">
+            </div>
+            <div class="gallery-item" data-category="Wedding">
+                <img src="images/w4.jpg" alt="Wedding Setup">
+            </div>
+            <div class="gallery-item" data-category="Wedding">
+                <img src="images/w5.jpg" alt="Wedding Venue">
+            </div>
+            <div class="gallery-item" data-category="Wedding">
+                <img src="images/w6.jpg" alt="Wedding Celebration">
+
+            </div>
+
+            <!-- Special Occasion Images -->
+            <div class="gallery-item" data-category="Special">
+                <img src="images/c7.jpg" alt="Special Event">
+
+            </div>
+            <div class="gallery-item" data-category="Special">
+                <img src="images/c8.jpg" alt="Anniversary">
+
+            </div>
+            <div class="gallery-item" data-category="Special">
+                <img src="images/hero5.jpg" alt="Engagement">
+            </div>
+            <div class="gallery-item" data-category="Special">
+                <img src="images/hh.jpg" alt="Celebration">
+            </div>
+            <div class="gallery-item" data-category="Special">
+                <img src="images/h3.jpg" alt="Special Decor">
+            </div>
+            <div class="gallery-item" data-category="Special">
+                <img src="images/c5.jpg" alt="Event Hall">
+            </div>
+
+            <!-- Corporate Images -->
+            <div class="gallery-item" data-category="Corporate">
+                <img src="images/c1.jpg" alt="Corporate Event">
+            </div>
+            <div class="gallery-item" data-category="Corporate">
+                <img src="images/c2.jpg" alt="Conference">
+            </div>
+            <div class="gallery-item" data-category="Corporate">
+                <img src="images/c3.jpg" alt="Corporate Dinner">
+            </div>
+            <div class="gallery-item" data-category="Corporate">
+                <img src="images/c4.jpg" alt="Team Meeting">
+            </div>
+            <div class="gallery-item" data-category="Corporate">
+                <img src="images/a2.jpg" alt="Award Ceremony">
+
+            </div>
+            <div class="gallery-item" data-category="Corporate">
+                <img src="images/c6.jpg" alt="Corporate Gala">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+<script>
+    // Gallery Filter Functionality
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Update active tab
+            filterTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const filterValue = tab.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+
+                if (filterValue === 'all' || category === filterValue) {
+                    item.style.display = 'block';
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                } else {
+                    item.style.display = 'none';
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.9)';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

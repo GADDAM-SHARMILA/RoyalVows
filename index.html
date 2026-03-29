@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalVows | Reception Venue & Event Planners</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23c47a2c' d='M2 54h60L50 18l-10 16-10-16-12 16-6-16z'/></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<section id="home" class="hero">
+    <div class="hero-card reveal active">
+        <h1>RoyalVows</h1>
+        <p>We craft moments worth a lifetime by transforming your vision into elegant, unforgettable celebrations.</p>
+        <a href="#contact" class="cta-btn">Check Availability</a>
+    </div>
+</section>
+
+<!-- About Section-->
+<section id="about" class="decorated-section reveal">
+    <div class="section-corners">
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+    </div>
+    <h2>Creating Timeless Memories</h2>
+    <div class="divider"></div>
+    <div class="about-wrapper">
+        <div class="about-container">
+            <div class="about-images">
+                <img src="images/hero1.jpg">
+                <img src="images/hero3.jpg">
+                <img src="images/a4.jpg">
+                <img src="images/a3.jpg">
+            </div>
+            <div class="about-content">
+                <h3>Where Dreams Meet Celebration</h3>
+                <p>At RoyalVows, we turn your special moments into timeless experiences with elegance, creativity, and attention to every detail—crafting memories that last a lifetime.p>
+<h3>Seamless Event Experiences</h3>
+<p>From grand weddings to intimate gatherings, we handle every aspect of planning and execution, ensuring your celebration is stress-free, beautifully designed, and truly unforgettable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="bg-img-section gallery-section reveal">
+    <div class="gold-overlay"></div>
+    <div class="section-content-relative">
+        <h2>Our Gallery</h2>
+        <div class="divider" style="background:#fff;"></div>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openGallery('Birthday')">
+                <img src="images/b6.jpg">
+                <div class="gallery-label">Birthday Gallery</div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Wedding')">
+                <img src="images/w4.jpg">
+                <div class="gallery-label">Wedding Gallery</div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Special Occasion')">
+                <img src="images/c5.jpg">
+                <div class="gallery-label">Special Occasion</div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Corporate')">
+                <img src="images/c6.jpg">
+                <div class="gallery-label">Corporate Gallery</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section with Premium Diamonds -->
+<section id="services" class="decorated-section reveal">
+    <div class="section-corners">
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+    </div>
+    <h2>Our Top Services</h2>
+    <div class="divider"></div>
+    <div class="services-wrapper">
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/pho.jpg">
+                <h4>Photography</h4>
+            </div>
+            <div class="service-card">
+                <img src="images/dec.jpg">
+                <h4>Decor</h4>
+            </div>
+            <div class="service-card">
+                <img src="images/dj.jpg">
+                <h4>DJ Services</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section reveal">
+    <div class="section-content-relative">
+        <h2>Connect With Us</h2>
+        <div class="divider" style="background:#fff;"></div>
+        <div class="contact-wrapper">
+            <div class="contact-info-side">
+                <h3>Contact Details</h3>
+                <div class="info-detail"><i class="fas fa-map-marker-alt"></i> 123 Celebration Drive, ST 12345</div>
+                <div class="info-detail"><i class="fas fa-phone-alt"></i> (123) 456-7890</div>
+                <div class="info-detail"><i class="fas fa-envelope"></i> rv270326@gmail.com </div>
+                <div class="info-detail"><i class="fas fa-clock"></i> Mon-Sat: 9am - 6pm</div>
+            </div>
+            <div class="contact-form-side">
+                <form id="contact-form" onsubmit="handleForm(event)">
+                    <div class="form-row">
+                        <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+                        <div class="form-group"><input type="tel" placeholder="Mobile Number" required></div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;"><input type="text" placeholder="Event Type"></div>
+                    <div class="form-group" style="margin-bottom:20px;"><textarea rows="5" placeholder="Message..." required></textarea></div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div id="success-msg" style="display:none; color:green; padding:20px; font-weight:600;">Message Sent! We will call you soon.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="reveal">
+<div class="section-corners">
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+    </div>
+
+    <h2>Client Testimonials</h2>
+    <div class="divider"></div>
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"The most beautiful venue I have ever visited. The staff was incredibly helpful."</p>
+            <h5 style="font-family:'Playfair Display';">- Sarah & John</h5>
+        </div>
+        <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"We hosted our corporate gala here and the atmosphere was perfect. Very professional."</p>
+            <h5 style="font-family:'Playfair Display';">- Robert Miller</h5>
+        </div>
+        <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"Unforgettable! They made our special day so smooth and elegant. Best catering ever."</p>
+            <h5 style="font-family:'Playfair Display';">- Emily Watson</h5>
+        </div>
+    </div>
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>

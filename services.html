@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | RoyalVows</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23c47a2c' d='M2 54h60L50 18l-10 16-10-16-12 16-6-16z'/></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .service-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* White service name (same as your index.html layout, but white) */
+        .service-card h4 {
+            margin: 14px 0 0;
+            font-family: 'Playfair Display', serif;
+            color: #fff;           /* White text */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            z-index: 2;
+            position: relative;
+            pointer-events: none;
+        }
+
+        /* Hover overlay with color + description */
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(196, 122, 44, 0.9);   /* gold‑brown */
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .service-overlay-text {
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: #fff;
+            text-align: center;
+        }
+
+        .service-card:hover .service-overlay {
+            opacity: 1;
+        }
+
+        .service-card p {
+            display: none;
+        }
+
+    body.services .hero {
+    background-image: url('images/h4.jpg');
+}
+    </style>
+</head>
+
+<body class="services">
+
+<!-- Hero -->
+<section id="home" class="hero services-hero">
+    <div class="hero-card reveal active">
+        <h1>Our Services</h1>
+        <p>From elegant décor to cinematic memories, we handle every detail so your celebration feels royal, not stressful.</p>
+        <a href="contact.html" class="cta-btn">Check Availability</a>
+
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="decorated-section reveal">
+    <div class="section-corners">
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+    </div>
+    <h2>Our Premium Services</h2>
+    <div class="divider"></div>
+    <div class="services-wrapper">
+        <div class="services-grid">
+            <!-- Photography -->
+            <div class="service-card expanded">
+                <img src="images/pho.jpg" alt="Photography">
+                <div class="service-overlay">
+                    <div class="service-overlay-text">
+                        Professional photography capturing every cherished moment with HD coverage, candid shots, and curated albums.
+                    </div>
+                </div>
+                <h4>Photography</h4>
+            </div>
+
+            <!-- Decor -->
+            <div class="service-card expanded">
+                <img src="images/dec.jpg" alt="Decor">
+                <div class="service-overlay">
+                    <div class="service-overlay-text">
+                        Luxury décor with floral arrangements, ambient lighting, and stage setups to create a truly royal ambience.
+                    </div>
+                </div>
+                <h4>Decor</h4>
+            </div>
+
+            <!-- DJ Services -->
+            <div class="service-card expanded">
+                <img src="images/dj.jpg" alt="DJ Services">
+                <div class="service-overlay">
+                    <div class="service-overlay-text">
+                        Premium DJ services with live mixing, high‑end sound systems, and MC services to keep the celebration non‑stop.
+                    </div>
+                </div>
+                <h4>DJ Services</h4>
+            </div>
+
+            <!-- Catering -->
+            <div class="service-card expanded">
+                <img src="images/caterr.jpg" alt="Catering">
+                <div class="service-overlay">
+                    <div class="service-overlay-text">
+                        Signature catering with multi‑cuisine menus, live counters, and dessert stations for every guest’s taste.
+                    </div>
+                </div>
+                <h4>Catering</h4>
+            </div>
+
+            <!-- LED Screening-->
+            <div class="service-card expanded">
+                <img src="images/led.jpg" alt="Event Planning & Coordination">
+                <div class="service-overlay">
+                    <div class="service-overlay-text">
+                        Stunning LED walls, live video feeds, and 4K displays for an immersive stage experience.
+                    </div>
+                </div>
+                <h4>LED Screening</h4>
+            </div>
+
+            <!-- Theme & Styling Design -->
+            <div class="service-card expanded">
+                <img src="images/them.jpg" alt="Theme & Styling Design">
+                <div class="service-overlay">
+                    <div class="service-overlay-text">
+                        Custom theme & styling design tailored to weddings, birthdays, and corporate events, from concept to execution.
+                    </div>
+                </div>
+                <h4>Theme & Styling Design</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

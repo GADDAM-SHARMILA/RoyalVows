@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalVows | Reception Venue & Event Planners</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23c47a2c' d='M2 54h60L50 18l-10 16-10-16-12 16-6-16z'/></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contact-section {
+            background-image: none !important;
+            background-color: #f3e6df;
+         }
+        body.contact .hero {
+    background-image: url('images/h7.jpg');
+}
+    </style>
+</head>
+<body class="contact">
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="hero-card reveal active">
+        <h1>Get in Touch</h1>
+        <p>We’d love to hear about your event and help you plan the perfect celebration at RoyalVows.</p>
+    </div>
+</section>
+
+<!-- Contact Section (About-section style, NO background image) -->
+<section id="contact" class="decorated-section contact-section reveal">
+    <div class="section-corners">
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+    </div>
+    <h2>Connect With Us</h2>
+    <div class="divider"></div>
+    <div class="contact-wrapper">
+        <div class="contact-info-side">
+            <h3>Contact Details</h3>
+            <div class="info-detail"><i class="fas fa-map-marker-alt"></i> 123 Celebration Drive, Vijayawada, AP 5200xx</div>
+            <div class="info-detail"><i class="fas fa-phone-alt"></i> +91 98765-43210</div>
+            <div class="info-detail"><i class="fas fa-envelope"></i> rv270326@gmail.com </div>
+            <div class="info-detail"><i class="fas fa-clock"></i> Mon-Sat: 9am - 9pm</div>
+        </div>
+        <div class="contact-form-side">
+            <form id="contact-form" onsubmit="handleForm(event)">
+                <div class="form-row">
+                    <div class="form-group"><input type="text" placeholder="Full Name *" required></div>
+                    <div class="form-group"><input type="tel" placeholder="Mobile Number *" required></div>
+                </div>
+                <div class="form-group" style="margin-bottom:20px;"><input type="text" placeholder="Event Type *" required></div>
+                <div class="form-group" style="margin-bottom:20px;"><textarea rows="5" placeholder="Tell us about your event..." required></textarea></div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="success-msg" style="display:none; color:green; padding:20px; font-weight:600;">
+                Message Sent! We will call you soon.
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
