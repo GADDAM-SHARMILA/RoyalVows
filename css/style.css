@@ -395,7 +395,7 @@ border: 4px solid  #f5d6a3;
         /* FIXED Footer - Left Aligned Columns + Proper Underlines */
         footer {
             background: var(--primary-gold); color: #fff; padding: 60px 5% 30px;
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: left;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: left;
         }
         .footer-col { text-align: left; }
         .footer-col h4 {
