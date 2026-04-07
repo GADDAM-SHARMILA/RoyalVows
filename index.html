@@ -111,20 +111,33 @@
                 <h3>Contact Details</h3>
                 <div class="info-detail"><i class="fas fa-map-marker-alt"></i> Hyderabad, Warangal, Karimnagar, Jammikunta</div>
                 <div class="info-detail"><i class="fas fa-phone-alt"></i> +91 8125944952</div>
+                <div class="info-detail"><i class="fas fa-phone-alt"></i> +91 8686407880</div>
                 <div class="info-detail"><i class="fas fa-envelope"></i> royalvows270326@gmail.com </div>
                 <div class="info-detail"><i class="fas fa-clock"></i> Mon-Sat: 9am - 6pm</div>
             </div>
             <div class="contact-form-side">
-                <form id="contact-form" onsubmit="handleForm(event)">
-                    <div class="form-row">
-                        <div class="form-group"><input type="text" placeholder="Full Name" required></div>
-                        <div class="form-group"><input type="tel" placeholder="Mobile Number" required></div>
+                <form id="contact-form" action="https://formspree.io/f/mnjowdqd" method="POST">                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Full Name" required>
                     </div>
-                    <div class="form-group" style="margin-bottom:20px;"><input type="text" placeholder="Event Type"></div>
-                    <div class="form-group" style="margin-bottom:20px;"><textarea rows="5" placeholder="Message..." required></textarea></div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Mobile Number" required>
+                    </div>
+                </div>
+
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <input type="text" name="event" placeholder="Event Type">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <textarea name="message" rows="5" placeholder="Message..." required></textarea>
+                    </div>
+
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
-                <div id="success-msg" style="display:none; color:green; padding:20px; font-weight:600;">Message Sent! We will call you soon.</div>
+                <div id="success-msg" style="display:none; color:green; padding:20px; font-weight:600;">
+                    Message Sent! We will call you soon.
+                </div>
             </div>
         </div>
     </div>
@@ -144,18 +157,14 @@
         <div class="testimonial-card">
             <i class="fas fa-quote-left"></i>
             <p>"The most beautiful venue I have ever visited. The staff was incredibly helpful."</p>
-            <h5 style="font-family:'Playfair Display';">- Sarah & John</h5>
+            <h5 style="font-family:'Playfair Display';">- Priya</h5>
         </div>
         <div class="testimonial-card">
             <i class="fas fa-quote-left"></i>
             <p>"We hosted our corporate gala here and the atmosphere was perfect. Very professional."</p>
-            <h5 style="font-family:'Playfair Display';">- Robert Miller</h5>
+            <h5 style="font-family:'Playfair Display';">- Rahul </h5>
         </div>
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left"></i>
-            <p>"Unforgettable! They made our special day so smooth and elegant. Best catering ever."</p>
-            <h5 style="font-family:'Playfair Display';">- Emily Watson</h5>
-        </div>
+
     </div>
 </section>
 <script src="js/script.js"></script>

@@ -121,12 +121,36 @@ async function initAllScripts() {
         document.body.style.overflow = 'auto';
     };
 
-    // Form handler
-    window.handleForm = function(e) {
-        e.preventDefault();
-        document.getElementById('contact-form').style.display = 'none';
-        document.getElementById('success-msg').style.display = 'block';
-    };
+    const form = document.getElementById("contact-form");
+    const successMsg = document.getElementById("success-msg");
+
+    if (form) {
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault(); // stop redirect
+
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    form.style.display = "none";
+                    successMsg.style.display = "block";
+                    form.reset();
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            } catch (error) {
+                alert("Error submitting form!");
+            }
+        });
+    }
     const currentPage = window.location.pathname.split("/").pop();
 
     document.querySelectorAll(".nav-item").forEach(link => {
